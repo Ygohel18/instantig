@@ -6,11 +6,10 @@
     CURLOPT_URL => $link,
     CURLOPT_SSL_VERIFYHOST => 0,
     CURLOPT_FOLLOWLOCATION => false,
-    CURLOPT_USERAGENT => 'Instagram 15.206.133.54 Android (23/6.0.1; 320dpi; 720x1280; samsung; SM-A310F; ygohel18; samsungexynos7580; en_EN;)',
+    CURLOPT_USERAGENT => 'Mozilla/5.0 (Linux; Android 6.0.1; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Mobile Safari/537.36',
     CURLOPT_HEADER => false,
     CURLOPT_HTTP_VERSION => 84,
-    CURLOPT_COOKIE => 'csrftoken=EMI26nJLlrhavUwJKW50mWxM2ETzaK3y;ds_user_id=5698133721;mid=XuCEBQALAAGpwPd_k6kSnxtPfe6D;sessionid=5698133721%3AaNQiLMvWGHrzDc%3A22'
-
+    CURLOPT_COOKIE => '_ga=GA1.1.1858824391.1587317770; hblid=BiC4bmXs9ruxVjST3m39N0Ja4bAdAab6; _ga_PQ59P2BKSP=GS1.1.1593718474.48.1.1593719199.0'
   ]);
 
   $resp = curl_exec($curl);
