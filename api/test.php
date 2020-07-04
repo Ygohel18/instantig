@@ -6,7 +6,7 @@
     CURLOPT_URL => $link,
     CURLOPT_SSL_VERIFYHOST => 0,
     CURLOPT_FOLLOWLOCATION => false,
-    CURLOPT_USERAGENT => 'Instagram 15.206.133.54 Android (23/6.0.1; 320dpi; 720x1280; samsung; SM-A310F; a3xelte; samsungexynos7580; en_EN; 110937453)',
+    CURLOPT_USERAGENT => 'Instagram 15.206.133.54 Android (23/6.0.1; 320dpi; 720x1280; samsung; SM-A310F; a3xelte; samsungexynos7580; en_EN; 5698133721)',
     CURLOPT_HEADER => false,
     CURLOPT_HTTP_VERSION => 84
 
