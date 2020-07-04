@@ -8,8 +8,7 @@ if (isset($_GET["posturl"])) {
 
     $jzon = @file_get_contents($link."?__a=1"); 
     $someArray = json_decode($jzon, true);
-
-    if (json_last_error() === JSON_ERROR_NONE) {
+    
         $type = $someArray["graphql"]["shortcode_media"]["__typename"];
         $displayurl = $someArray["graphql"]["shortcode_media"]["display_url"];
         $imagearray = $someArray["graphql"]["shortcode_media"]["display_resources"][2];
@@ -22,7 +21,7 @@ if (isset($_GET["posturl"])) {
         $responce['image_width'] = $imagearray["config_width"];
         $responce['image_height'] = $imagearray["config_height"];
         $responce['image_url'] = $imagearray["src"];
-
+    
         if($type == "GraphSidecar") {
             $responce['sidecar'] = array();
             $sidecar = $someArray["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"];
@@ -33,11 +32,6 @@ if (isset($_GET["posturl"])) {
                 }
             }
         }
-        
-    } else {
-        $responce['status'] = "401";
-        $responce['message'] = "Private account";
-    }
 } else {
     $responce['status'] = "401";
     $responce['message'] = "Post url not found";
