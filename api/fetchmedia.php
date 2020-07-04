@@ -3,11 +3,13 @@ header("Access-Control-Allow-Origin: *");
 
 $responce = array();
 
-if (isset($_POST["posturl"])) {
-    $link = $_POST["posturl"]; 
+if (isset($_GET["posturl"])) {
+    $link = $_GET["posturl"]; 
 
     $jzon = file_get_contents($link."?__a=1"); 
     $someArray = json_decode($jzon, true);
+
+    print_r($someArray);
 
 	 $type = $someArray["graphql"]["shortcode_media"]["__typename"];
         $displayurl = $someArray["graphql"]["shortcode_media"]["display_url"];
