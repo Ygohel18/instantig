@@ -1,6 +1,6 @@
 <?php 
   $curl = curl_init();
-  $link = 'https://www.instagram.com/p/CCOCs6jAFn4/?__a=1';
+  $link = 'https://www.instagram.com/p/CCOCs6jAFn4/?__a=1&csrf=EMI26nJLlrhavUwJKW50mWxM2ETzaK3y';
   curl_setopt_array($curl, [
     CURLOPT_RETURNTRANSFER => 1,
     CURLOPT_URL => $link,
