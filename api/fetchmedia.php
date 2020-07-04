@@ -3,8 +3,8 @@ header("Access-Control-Allow-Origin: *");
 
 $responce = array();
 
-if (isset($_GET["posturl"])) {
-    $link = $_GET["posturl"]; 
+if (isset($_POST["posturl"])) {
+    $link = $_POST["posturl"]; 
     $curl = curl_init();
     
     curl_setopt_array($curl, [
