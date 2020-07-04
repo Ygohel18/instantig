@@ -8,7 +8,9 @@
     CURLOPT_FOLLOWLOCATION => false,
     CURLOPT_USERAGENT => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile Safari/537.36',
     CURLOPT_AUTOREFERER => false,
-    CURLOPT_HEADER => false
+    CURLOPT_HEADER => false,
+    CURLOPT_HTTP_VERSION => 84
+
   ]);
 
   $resp = curl_exec($curl);
