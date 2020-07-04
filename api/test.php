@@ -6,7 +6,7 @@
     CURLOPT_URL => $link,
     CURLOPT_SSL_VERIFYHOST => 0,
     CURLOPT_FOLLOWLOCATION => false,
-    CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36',
+    CURLOPT_USERAGENT => 'Instagram 15.206.133.54 Android (23/6.0.1; 320dpi; 720x1280; samsung; SM-A310F; ygohel18; samsungexynos7580; en_EN;)',
     CURLOPT_HEADER => false,
     CURLOPT_HTTP_VERSION => 84,
     CURLOPT_COOKIE => 'csrftoken=EMI26nJLlrhavUwJKW50mWxM2ETzaK3y;ds_user_id=5698133721;mid=XuCEBQALAAGpwPd_k6kSnxtPfe6D;sessionid=5698133721%3AaNQiLMvWGHrzDc%3A22'
