@@ -31,6 +31,7 @@ if (isset($_POST["posturl"])) {
         $shortcode = $someArray["graphql"]["shortcode_media"]["shortcode"];
         $displayurl = $someArray["graphql"]["shortcode_media"]["display_url"];
         $imagearray = $someArray["graphql"]["shortcode_media"]["display_resources"][2];
+        $caption = $someArray["graphql"]["shortcode_media"]["edge_media_to_caption"]["edges"][0]["node"]["text"];
         // setrawcookie("image", $image, 0, "/");
 
         $responce['status'] = "200";
@@ -42,6 +43,7 @@ if (isset($_POST["posturl"])) {
         $responce['image_url'] = $imagearray["src"];
         $responce['username'] = $username;
         $responce['shortcode'] = $shortcode;
+        $responce['caption'] = $caption;
 
         if($type == "GraphVideo") {
             $videourl = $someArray["graphql"]["shortcode_media"]["video_url"];
