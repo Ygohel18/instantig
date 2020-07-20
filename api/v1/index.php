@@ -29,8 +29,25 @@ function profilePictureResponce($data) {
     return json_encode($responce, JSON_UNESCAPED_SLASHES);
 }
 
-function mediaResponce() {
-    return json_encode($data, JSON_UNESCAPED_SLASHES);
+function mediaResponce($data) {
+    $responce['code'] = $data['code'] = "200";
+    $responce['status'] = $data['status'] = "valid";
+    $responce['message'] = $data['message'] = "Download media";
+    $responce['type'] = $data['type'] = $type;
+    $responce['displau_url'] = $data['display_url'] = $displayurl;
+    $responce['image_width'] = $data['image_width'] = $imagearray["config_width"];
+    $responce['image_height'] = $data['image_height'] = $imagearray["config_height"];
+    $responce['media_url'] = $data['media_url'] = $imagearray["src"];
+    $responce['username'] = $data['username'] = $username;
+    $responce['shortcode'] = $data['shortcode'] = $shortcode;
+    $responce['caption'] = $data['caption'] = $caption;
+
+    if($responce['type'] == "GraphSidecar") {
+        $responce['sidecar'] = $data['sidecar'];
+        $responce['sidecar_type'] = $data['sidecar_type'];
+    }
+
+    return json_encode($responce, JSON_UNESCAPED_SLASHES);
 }
 
 function isValidApiRequest($token, $key) {
@@ -175,7 +192,7 @@ if($flag) {
     if ( $type == "curl_dp" ) {
         echo profilePictureResponce($data);
     } elseif ( $type == "curl_media" ) {
-        echo mediaResponce();
+        echo mediaResponce($data);
     } else {
         echo successResponce();
     }
