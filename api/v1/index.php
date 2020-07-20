@@ -174,7 +174,7 @@ header('Content-Type: application/json');
 if($flag) {
     if ( $type == "curl_dp" ) {
         echo profilePictureResponce($data);
-    } else if ( $type == "curl_media" ) {
+    } elseif ( $type == "curl_media" ) {
         echo mediaResponce();
     } else {
         echo successResponce();
