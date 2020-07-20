@@ -29,9 +29,8 @@ function profilePictureResponce($data) {
     return json_encode($responce, JSON_UNESCAPED_SLASHES);
 }
 
-function mediaResponce($data) {
-    $responce = $data;
-    return json_encode($responce, JSON_UNESCAPED_SLASHES);
+function mediaResponce() {
+    return json_encode($data, JSON_UNESCAPED_SLASHES);
 }
 
 function isValidApiRequest($token, $key) {
@@ -176,7 +175,7 @@ if($flag) {
     if ( $type == "curl_dp" ) {
         echo profilePictureResponce($data);
     } else if ( $type == "curl_media" ) {
-        echo mediaResponce($data);
+        echo mediaResponce();
     } else {
         echo successResponce();
     }
