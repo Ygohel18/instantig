@@ -90,7 +90,6 @@ if (isset($_POST['api_token']) && isset($_POST['api_key'])) {
             }
 
             if ( $user_api_request == "curl_media") {
-                $flag = TRUE;
                 if (isset($_POST["url"])) {
                     $link = $_POST["url"]; 
                     $curl = curl_init();
@@ -153,6 +152,8 @@ if (isset($_POST['api_token']) && isset($_POST['api_key'])) {
                                 }       
                             }
                         }
+
+                        $flag = TRUE;
                         
                     } else {
                         $data['code'] = "401";
