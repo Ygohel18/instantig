@@ -11,7 +11,7 @@ if (isset($_POST["posturl"])) {
         CURLOPT_RETURNTRANSFER => 1,
         CURLOPT_URL => $link.'?__a=1',
         CURLOPT_HTTPHEADER => [
-            'Cookie: ig_did=A03A5753-4EC9-415D-A778-1B3925B31B09; mid=XwqlXQALAAFJfrVx5-YFYwN6q-uH; csrftoken=dhGmbuTSSxnZGZRCk7PtyRdAu7gjojUl; ds_user_id=8173227811; sessionid=8173227811%3AGa3hy7FFSMwSzt%3A15; shbid=17634; shbts=1594533239.137384; rur=PRN; urlgen="{\"2409:4041:2e96:97d:41ea:c89e:8f03:e3b9\": 55836}:1juUwN:i_ct7JlDKyPf_4BXHKfwPO4NKsc"',
+            'Cookie: ig_did=6673FDE0-4797-4BFE-941A-8023C5FC5AE7; mid=Xx3MKgALAAHPzEfJptIrYxsk4piR; csrftoken=7b096zhtnkk8XSsLYfxdJZDMOLwq8E8F; ds_user_id=36863456778; sessionid=36863456778%3AtZ9MzQPwajLyB2%3A6; rur=FRC; urlgen="{\"2409:4041:e9b:fa1:9dba:7329:35b8:7bbc\": 55836}:1jzlSZ:ZXqcSy1lUGYogC98lDy8lyVOhwg"',
         ],
         CURLOPT_SSL_VERIFYHOST => 0,
         CURLOPT_FOLLOWLOCATION => false,
